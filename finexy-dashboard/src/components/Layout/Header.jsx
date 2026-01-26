@@ -1,8 +1,11 @@
 import React from 'react';
-import { Search, Bell, Info } from 'lucide-react';
+import { Search, Bell, Info, Moon, Sun } from 'lucide-react';
 import styles from './Header.module.css';
+import { useTheme } from '../../context/ThemeContext';
 
 const Header = () => {
+    const { theme, toggleTheme } = useTheme();
+
     return (
         <header className={styles.header}>
             <div className={styles.brand}>
@@ -19,6 +22,9 @@ const Header = () => {
             </nav>
 
             <div className={styles.actions}>
+                <button className={styles.iconBtn} onClick={toggleTheme}>
+                    {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+                </button>
                 <div className={styles.search}>
                     <Search size={20} />
                 </div>

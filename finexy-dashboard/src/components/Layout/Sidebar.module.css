@@ -47,13 +47,13 @@
 }
 
 .navItem:hover {
-    background-color: #f5f5f5;
+    background-color: var(--color-surface-hover);
     color: var(--color-primary-orange);
 }
 
 .active {
-    background-color: #2c2c2c !important;
-    color: white !important;
+    background-color: var(--color-inverse-surface) !important;
+    color: var(--color-inverse-text) !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 

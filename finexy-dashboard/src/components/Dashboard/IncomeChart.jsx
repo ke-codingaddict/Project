@@ -2,6 +2,7 @@ import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import Card from '../ui/Card';
 import styles from './IncomeChart.module.css';
+import { useTheme } from '../../context/ThemeContext';
 
 const data = [
     { name: 'Jan', profit: 20000, loss: 12000 },
@@ -15,6 +16,19 @@ const data = [
 ];
 
 const IncomeChart = () => {
+    const { theme } = useTheme();
+    const isDark = theme === 'dark';
+
+    const profitColor = isDark ? '#ffffff' : '#1a1a1a';
+    const axisColor = isDark ? '#a0a0a0' : '#888888';
+    const tooltipStyle = {
+        backgroundColor: isDark ? '#1e1e1e' : '#ffffff',
+        borderColor: isDark ? '#333333' : '#f0f0f0',
+        color: isDark ? '#ffffff' : '#1a1a1a',
+        borderRadius: '8px',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+    };
+
     return (
         <Card className={styles.chartCard}>
             <div className={styles.header}>
@@ -31,25 +45,30 @@ const IncomeChart = () => {
                             dataKey="name"
                             axisLine={false}
                             tickLine={false}
-                            tick={{ fontSize: 12, fill: '#aaa' }}
+                            tick={{ fontSize: 12, fill: axisColor }}
                             dy={10}
                         />
                         <YAxis
                             axisLine={false}
                             tickLine={false}
-                            tick={{ fontSize: 12, fill: '#aaa' }}
+                            tick={{ fontSize: 12, fill: axisColor }}
                             tickFormatter={(value) => `${value / 1000}k`}
                         />
-                        <Tooltip />
+                        <Tooltip
+                            contentStyle={tooltipStyle}
+                            itemStyle={{ color: isDark ? '#e0e0e0' : '#1a1a1a' }}
+                            cursor={{ fill: isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)' }}
+                        />
                         <Legend
                             verticalAlign="top"
                             height={36}
                             align="right"
                             iconType="circle"
+                            formatter={(value) => <span style={{ color: isDark ? '#ccc' : '#666' }}>{value}</span>}
                         />
                         <Bar
                             dataKey="profit"
-                            fill="#1a1a1a"
+                            fill={profitColor}
                             radius={[4, 4, 4, 4]}
                             barSize={12}
                             name="Profit"

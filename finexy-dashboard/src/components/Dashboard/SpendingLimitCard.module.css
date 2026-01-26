@@ -10,7 +10,7 @@
 
 .progressBar {
     height: 10px;
-    background: #f0f0f0;
+    background: var(--color-surface-hover);
     border-radius: 99px;
     overflow: hidden;
     /* Optional: striped background for the empty part as seen in image? 

@@ -15,7 +15,7 @@
 }
 
 .white {
-    background: white;
+    background: var(--color-surface);
 }
 
 .orange {
@@ -45,7 +45,7 @@
 }
 
 .white .iconCircle {
-    background: #f5f5f5;
+    background: var(--color-surface-hover);
     color: var(--color-text-main);
 }
 

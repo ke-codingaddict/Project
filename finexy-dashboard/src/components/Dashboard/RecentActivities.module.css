@@ -70,7 +70,7 @@
 .table td {
     padding: 16px 0;
     font-size: 13px;
-    border-bottom: 1px solid #f9f9f9;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .table tr:last-child td {
@@ -92,7 +92,7 @@
 .iconBox {
     width: 32px;
     height: 32px;
-    background: #f5f5f5;
+    background: var(--color-surface-hover);
     border-radius: 8px;
     display: flex;
     align-items: center;

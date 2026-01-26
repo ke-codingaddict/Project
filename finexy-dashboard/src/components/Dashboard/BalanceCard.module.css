@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    background: #f5f5f5;
+    background: var(--color-background);
     padding: 4px 8px;
     border-radius: 99px;
     font-size: 12px;
@@ -69,11 +69,11 @@
 }
 
 .btnDark {
-    background: #1a1a1a;
-    color: white;
+    background: var(--color-inverse-surface);
+    color: var(--color-inverse-text);
 }
 
 .btnLight {
-    background: #f5f5f5;
+    background: var(--color-surface-hover);
     color: var(--color-text-main);
 }
