@@ -1,0 +1,42 @@
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.progressContainer {
+    margin-bottom: 16px;
+}
+
+.progressBar {
+    height: 10px;
+    background: #f0f0f0;
+    border-radius: 99px;
+    overflow: hidden;
+    /* Optional: striped background for the empty part as seen in image? 
+       Image shows faint diagonal stripes in the gray part. */
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+}
+
+.progressFill {
+    background-color: var(--color-primary-orange);
+    height: 100%;
+    border-radius: 99px;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.muted {
+    color: var(--color-text-muted);
+    font-weight: 400;
+}
+
+.limit {
+    color: var(--color-text-secondary);
+}

@@ -1,0 +1,19 @@
+.chartCard {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.header {
+    margin-bottom: 24px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    color: var(--color-text-secondary);
+    font-size: 13px;
+}

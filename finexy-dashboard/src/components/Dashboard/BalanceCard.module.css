@@ -1,0 +1,79 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.label {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+.currencySelector {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f5f5f5;
+    padding: 4px 8px;
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.amount {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--color-text-main);
+}
+
+.trend {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 24px;
+    font-size: 13px;
+}
+
+.trendValue {
+    color: var(--color-success);
+    font-weight: 600;
+}
+
+.trendLabel {
+    color: var(--color-text-secondary);
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    flex: 1;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btnDark {
+    background: #1a1a1a;
+    color: white;
+}
+
+.btnLight {
+    background: #f5f5f5;
+    color: var(--color-text-main);
+}

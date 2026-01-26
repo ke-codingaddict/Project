@@ -1,0 +1,139 @@
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: transparent;
+    /* Blends with main background */
+    margin-bottom: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logoText {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-primary-orange);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Reusing the logo icon style conceptually, but here we just show text 'Finexy' per image top left next to pills? 
+   Actually in the image, the 'Finexy' text is top left, but sidebar has icons. 
+   The sidebar seems to be Floating or detached? 
+   No, looking at the image: 
+   There is a sidebar on the far left with icons. 
+   Then the main content area has the "Finexy" logo at the top left OF THE CONTENT AREA? 
+   Or is the sidebar just icons, and the top bar has the branding?
+   Leftmost strip: Icons (Sun/Moon, Grid, Calendar...). 
+   Wait, the sidebar has a "Finexy" logo at the top? No.
+   The top left of the whole image has "Finexy" (Logo + Text).
+   The sidebar is BELOW that?
+   Actually, looking at the crop:
+   Top Left corner: "Finexy" logo (Orange F).
+   To the right of it: "Overview / Activity...".
+   BELOW the "Finexy" logo is the start of the vertical sidebar?
+   The vertical sidebar has: Sun/Moon toggle, then a spacer, then Grid icon...
+   
+   Let's refine the layout:
+   It looks like a single Page layout where:
+   - Top Bar spans full width (Logo, Menu Pills, Search, Profile).
+   - Sidebar is a thin strip on the left, below the top bar, or part of the layout.
+   
+   Actually, the sidebar icons (Sun/Moon, Grid...) are aligned vertically.
+   The Finexy logo is clearly in the header row.
+   
+   So:
+   Header: [Logo] [Nav Pills] [Search/Actions/Profile]
+   Body: [Sidebar] [Main Content]
+*/
+
+.pills {
+    display: flex;
+    background: white;
+    padding: 6px;
+    border-radius: 999px;
+    box-shadow: var(--shadow-sm);
+    gap: 4px;
+}
+
+.pill {
+    padding: 8px 24px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    transition: all 0.2s;
+}
+
+.pill.active {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.pill:hover:not(.active) {
+    background-color: #f5f5f5;
+    color: var(--color-text-main);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.iconBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-main);
+    box-shadow: var(--shadow-sm);
+}
+
+.search {
+    margin-right: 8px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 6px 16px 6px 6px;
+    border-radius: 999px;
+    box-shadow: var(--shadow-sm);
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-main);
+    line-height: 1.2;
+}
+
+.email {
+    font-size: 11px;
+    color: var(--color-text-secondary);
+}

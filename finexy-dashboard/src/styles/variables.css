@@ -1,0 +1,46 @@
+:root {
+  /* Colors */
+  --color-bg: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-primary-orange: #ff5722;
+  --color-text-main: #1a1a1a;
+  --color-text-secondary: #888888;
+  --color-text-muted: #bdbdbd;
+  --color-border: #eeeeee;
+  
+  --color-success: #4caf50;
+  --color-danger: #f44336;
+  
+  --color-card-dark: #1e1e1e;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.05);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.05);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Dark Mode Variables (Optional foundation) */
+@media (prefers-color-scheme: dark) {
+  /* We'll stick to light mode as primary per image, but can add overrides here */
+}
