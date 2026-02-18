@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --color-golden: #DCCA87;
+  --color-black: #0C0C0C;
+  --color-gray: #545454;
+  --color-crimson: #DC143C;
+  --color-grey: #AAAAAA;
+  --color-white: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.custom__button {
+  background-color: var(--color-crimson);
+  color: var(--color-white);
+  /* Button text black on red background */
+  font-family: var(--font-base);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 28px;
+  font-size: 16px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  border: 1px solid var(--color-crimson);
+  outline: none;
+  cursor: pointer;
+
+  transition: 0.5s ease;
+}
+
+.custom__button:hover {
+  background-color: var(--color-golden);
+  color: #000000;
+}
+
+.p__opensans {
+  font-family: var(--font-open-sans);
+  /* Reverted to open sans */
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.p__cormorant {
+  font-family: var(--font-cormorant-upright);
+  /* Reverted to cormorant */
+  color: var(--color-golden);
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.04em;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  line-height: 29.9px;
+  font-size: 23px;
+}
+
+.headtext__cormorant {
+  font-family: var(--font-cormorant-upright);
+  /* Reverted to cormorant */
+  color: var(--color-golden);
+  font-style: normal;
+  font-weight: 700;
+  /* Reverted weight */
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 110px;
+  font-size: 64px;
+}
+
+.spoon__img {
+  width: 45px;
+}
+
+@media screen and (min-width: 2000px) {
+  .p__opensans {
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .p__cormorant {
+    font-size: 38px;
+    line-height: 55px;
+  }
+
+  .headtext__cormorant {
+    font-size: 150px;
+    line-height: 200px;
+  }
+
+  .custom__button {
+    font-size: 32px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .p__opensans {
+    font-size: 14px;
+  }
+
+  .p__cormorant {
+    font-size: 21px;
+  }
+
+  .headtext__cormorant {
+    font-size: 45px;
+    line-height: 70px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .p__opensans {
+    font-size: 12px;
+  }
+
+  .p__cormorant {
+    font-size: 19px;
+  }
+
+  .headtext__cormorant {
+    font-size: 45px;
+    line-height: 70px;
+  }
+}

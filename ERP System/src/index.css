@@ -1,0 +1,258 @@
+:root {
+  /* HSL Color System */
+  /* Primary - Deep Indigo */
+  --primary-h: 230;
+  --primary-s: 70%;
+  --primary-l: 55%;
+  --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+  --primary-foreground: hsl(0, 0%, 100%);
+
+  /* Secondary - Teal to complement Indigo */
+  --secondary-h: 170;
+  --secondary-s: 70%;
+  --secondary-l: 45%;
+  --secondary: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));
+  --secondary-foreground: hsl(0, 0%, 100%);
+
+  /* Accent - Coral */
+  --accent-h: 10;
+  --accent-s: 80%;
+  --accent-l: 60%;
+  --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --accent-foreground: hsl(0, 0%, 100%);
+
+  /* Neutral / Backgrounds */
+  --background: hsl(220, 20%, 97%);
+  /* Light blue-ish grey */
+  --surface: hsl(0, 0%, 100%);
+  /* Pure White */
+  --surface-alt: hsl(220, 20%, 94%);
+  /* Slightly darker surface */
+
+  /* Text */
+  --text-primary: hsl(220, 30%, 15%);
+  --text-secondary: hsl(220, 20%, 40%);
+  --text-muted: hsl(220, 15%, 60%);
+
+  /* States */
+  --success: hsl(145, 65%, 40%);
+  --warning: hsl(40, 90%, 55%);
+  --danger: hsl(0, 75%, 50%);
+
+  /* Layout */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Dark Mode Overrides (System Preference) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: hsl(225, 25%, 12%);
+    --surface: hsl(225, 20%, 18%);
+    --surface-alt: hsl(225, 20%, 22%);
+
+    --text-primary: hsl(225, 20%, 95%);
+    --text-secondary: hsl(225, 15%, 70%);
+  }
+}
+
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Utilities */
+.h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.h5 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* Layout Utilities */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+/* Components (Utility-Components Hybrid) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  gap: 0.5rem;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.btn-primary:hover {
+  filter: brightness(110%);
+}
+
+.btn-secondary {
+  background-color: var(--surface);
+  border: 1px solid #e2e8f0;
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--surface-alt);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--text-secondary);
+}
+
+.btn-ghost:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--text-primary);
+}
+
+.card {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid #e2e8f0;
+  background-color: var(--surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.15);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
