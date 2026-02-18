@@ -1,5 +1,38 @@
 @import "tailwindcss";
 
+/* Proxima Nova — Self-hosted font */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Extrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/ProximaNova-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
@@ -14,14 +47,14 @@
   --color-crimson: #fe0000;
   --color-grey: #AAAAAA;
 
-  /* Official Font — Proxima Nova (Montserrat as free alternative) */
-  --font-base: var(--font-proxima-nova), 'Montserrat', sans-serif;
-  --font-alt: var(--font-proxima-nova), 'Montserrat', sans-serif;
+  /* Official Font — Proxima Nova */
+  --font-base: 'Proxima Nova', sans-serif;
+  --font-alt: 'Proxima Nova', sans-serif;
 
-  /* Font Weights */
-  --font-weight-black: 900;   /* Proxima Nova Black */
-  --font-weight-bold: 700;    /* Proxima Nova Bold */
-  --font-weight-regular: 400; /* Proxima Nova Regular */
+  /* Font Weights — Official Proxima Nova Mapping */
+  --font-weight-bold: 800;    /* Proxima Nova Bold → used for titles & headings */
+  --font-weight-regular: 400; /* Proxima Nova Regular → used for body text */
+  --font-weight-light: 300;   /* Proxima Nova Light → used for captions */
 }
 
 body {
@@ -68,22 +101,22 @@ body {
   }
 }
 
-/* Proxima Nova Regular — body text */
+/* Proxima Nova Regular — body / paragraph text */
 .p__opensans {
   font-family: var(--font-base);
   color: #ffffff;
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-regular); /* 400 */
   letter-spacing: 0.04em;
   text-transform: capitalize;
   line-height: 28px;
   font-size: 16px;
 }
 
-/* Proxima Nova Bold — accent/subheading text */
+/* Proxima Nova Bold — subheadings / accent text */
 .p__cormorant {
   font-family: var(--font-base);
   color: var(--color-red);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold); /* 800 */
   text-transform: capitalize;
   letter-spacing: 0.04em;
   font-feature-settings: 'tnum' on, 'lnum' on;
@@ -91,12 +124,12 @@ body {
   font-size: 23px;
 }
 
-/* Proxima Nova Black — main headings */
+/* Proxima Nova Bold — main page titles */
 .headtext__cormorant {
   font-family: var(--font-base);
   color: var(--color-red);
   font-style: normal;
-  font-weight: var(--font-weight-black);
+  font-weight: var(--font-weight-bold); /* 800 */
   letter-spacing: 0.04em;
   text-transform: capitalize;
   line-height: 110px;
@@ -132,29 +165,33 @@ body {
 @media screen and (max-width: 650px) {
   .p__opensans {
     font-size: 14px;
+    line-height: 24px;
   }
 
   .p__cormorant {
-    font-size: 21px;
+    font-size: 20px;
+    line-height: 28px;
   }
 
   .headtext__cormorant {
-    font-size: 45px;
-    line-height: 70px;
+    font-size: 40px;
+    line-height: 48px;
   }
 }
 
 @media screen and (max-width: 450px) {
   .p__opensans {
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 24px;
   }
 
   .p__cormorant {
-    font-size: 19px;
+    font-size: 20px;
+    line-height: 28px;
   }
 
   .headtext__cormorant {
-    font-size: 45px;
-    line-height: 70px;
+    font-size: 32px;
+    line-height: 40px;
   }
 }
