@@ -22,7 +22,7 @@ const Navbar = () => {
             className="object-contain w-[80px] lg:w-[140px] h-auto"
           />
           <Image
-            src="/images/logo-2.png"
+            src="/images/logo2.jpeg"
             alt="Bravo Logo 2"
             width={200}
             height={130}
