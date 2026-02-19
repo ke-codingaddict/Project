@@ -10,9 +10,7 @@ const AboutUs = () => (
     <div className="absolute inset-0 bg-[url('/bg.png')] bg-cover bg-center bg-fixed z-0" />
 
     <div className="absolute inset-0 flex justify-center items-center z-0">
-      <div className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] relative opacity-20 select-none">
-       
-      </div>
+      <div className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] relative opacity-20 select-none"></div>
     </div>
 
     <div className="w-full max-w-[1300px] z-10 flex flex-col lg:flex-row justify-center items-center lg:items-start w-full gap-8 lg:gap-16">
@@ -25,7 +23,7 @@ const AboutUs = () => (
           height={10}
           className="spoon__img rotate-180 mb-4 mt-2"
         />
-        <p className="p__opensans text-gray-400 mb-8 max-w-[500px] text-left">
+        <p className="p__opensans text-gray-400 mb-8 max-w-[500px] text-center">
           Bravo! Restaurant is a trendy casual dining restaurant set on the
           serene waterfront of Eden Island. We offer a vibrant yet relaxed
           dining atmosphere where fresh flavors, handcrafted dishes, and
@@ -58,7 +56,7 @@ const AboutUs = () => (
           height={10}
           className="spoon__img mt-2 mb-4"
         />
-        <p className="p__opensans  text-gray-400 mb-8 max-w-[500px]">
+        <p className="p__opensans  text-gray-400 mb-8 max-w-[500px] text-center">
           On 13th February 2010, Bravo! Restaurant opened its doors with a clear
           vision — to create a vibrant waterfront destination where great food,
           genuine connections, and island living come together. More than just a
