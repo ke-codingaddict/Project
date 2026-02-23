@@ -7,12 +7,14 @@ import VideoIntro from "@/components/VideoIntro";
 import FindUs from "@/components/FindUs";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
+import OurHistory from "@/components/OurHistory";
 
 export default function Home() {
   return (
     <main className="w-full overflow-hidden">
       <AboutUs />
       <Gallery />
+      <OurHistory />
 
       <Chef />
       <VideoIntro />
