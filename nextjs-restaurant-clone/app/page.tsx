@@ -18,6 +18,7 @@ export default function Home() {
 
       <Chef />
       <VideoIntro />
+      <Gallery hideHeader={true} />
       <FindUs />
       <Footer />
     </main>

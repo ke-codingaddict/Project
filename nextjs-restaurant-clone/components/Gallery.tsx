@@ -37,7 +37,11 @@ const galleryImages = [
   },
 ];
 
-const Gallery = () => {
+interface GalleryProps {
+  hideHeader?: boolean;
+}
+
+const Gallery = ({ hideHeader = false }: GalleryProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [selectedImage, setSelectedImage] = React.useState<
     (typeof galleryImages)[0] | null
@@ -67,15 +71,17 @@ const Gallery = () => {
       className="flex flex-col justify-center items-center py-16 px-4 lg:px-16 bg-black w-full"
       id="gallery"
     >
-      <div className="text-center mb-12 max-w-[800px]">
-        <SubHeading title="Menu Highlights" />
+      {!hideHeader && (
+        <div className="text-center mb-12 max-w-[800px]">
+          <SubHeading title="Menu Highlights" />
 
-        <p className="p__opensans text-gray-400 mt-4">
-          From the first sip of our artisanal coffee to the last bite of our
-          decadent brunch, every moment is crafted to delight. Join us for a
-          weekend experience like no other.
-        </p>
-      </div>
+          <p className="p__opensans text-gray-400 mt-4">
+            From the first sip of our artisanal coffee to the last bite of our
+            decadent brunch, every moment is crafted to delight. Join us for a
+            weekend experience like no other.
+          </p>
+        </div>
+      )}
 
       <div className="relative w-full">
         <div
@@ -107,7 +113,6 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-
 
         <div className="absolute top-[50%] left-2 transform -translate-y-1/2 z-10 hidden md:block">
           <div
